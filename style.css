@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&family=Roboto+Mono&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e84a5f;
+}
+.main-container {
+  max-width: 900px;
+  margin: auto;
+  height: 80vh;
+  background-color: #99b898;
+  border-radius: 1%;
+}
+h1 {
+  text-align: center;
+  color: white;
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 80px;
+  padding-top: 15px;
+}
+.typing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.type {
+  overflow: hidden;
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: 36.6666666667px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  cursor: text;
+  transition: 0.25s ease;
+}
+input {
+  display: block;
+  width: 100%;
+  padding-top: 20px;
+  border: none;
+  border-radius: 0;
+  color: white;
+  background: #99b898;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+input:valid ~ label {
+  top: 0;
+  font-family: "Roboto Mono", monospace;
+  font-family: 400;
+  color: #feceab;
+}
+input:focus {
+  outline: none;
+}
+input:focus ~ label {
+  top: 0;
+  font-family: "Roboto Mono", monospace;
+  font-family: 400;
+  color: #2a363b;
+}
+input:focus ~ .bar:before {
+  transform: translateX(0);
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #333 inset;
+  -webkit-text-fill-color: white !important;
+}
+.bar {
+  background: rgba(255, 255, 255, 0.5);
+  content: "";
+  height: 4px;
+  transition: 0.3s ease;
+  position: relative;
+}
+.bar:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background: #2a363b;
+  transform: translateX(-100%);
+}
+::selection {
+  background: rgba(33, 150, 243, 0.3);
+}
+.words {
+  margin-right: 10px;
+}
+
+#add {
+  height: 40px;
+  width: 90px;
+  background-color: azure;
+  color: black;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: "Roboto Mono", monospace;
+  font-family: 400;
+}
+
+li {
+  font-family: "Poppins";
+  font-size: 19px;
+  font-style: inherit;
+  font-weight: 500;
+  color: #2a363b;
+  letter-spacing: 2px;
+}
+.rem {
+  margin-left: 5px;
+  color: red;
+  background-color: #99b898;
+  cursor: pointer;
+  border: none;
+}

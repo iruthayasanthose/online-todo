@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>To-do List</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>To-do List</h1>
+      <div class="typing">
+        <div class="type">
+          <input class="words" type="text" id="txtbx" />
+          <label for="name">Add your To-do</label>
+          <div class="bar"></div>
+        </div>
+        <button id="add">Add</button>
+      </div>
+      <ol id="mylist"></ol>
+    </div>
+    <script src="app.js"></script>
+    <script>
+      var input = document.getElementById("txtbx");
+      input.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+          event.preventDefault();
+          document.getElementById("add").click();
+        }
+      });
+    </script>
+  </body>
+</html>
